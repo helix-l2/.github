@@ -44,11 +44,14 @@ flowchart LR
   B --> UI
 ```
 
-## Core Repositories
+## How Helix Compares
 
-- `helix-contracts`
-- `helix-reth`
-- `helix-client`
-- `helix-prover`
-- `helix-bridge-service`
-- `helix-bridge-ui`
+| Dimension | Optimistic Rollups | Polygon zkEVM-style Stack | Helix |
+|---|---|---|---|
+| EVM equivalence | Typically not positioned as Type 1 | zkEVM compatibility with zk-driven constraints | **Type 1 EVM target (execution-equivalent path)** |
+| Finality model | Fraud-proof challenge window | ZK proof verification | **Fast verification pipeline with SGX/SP1 options** |
+| Throughput architecture | Good, but challenge model tradeoffs | Good, often prover-bound in practice | **High-TPS execution path + modular proving** |
+| Proof strategy flexibility | Fraud-proof model | Primarily zk proving | **Multi-path proving: SGX + SP1 (zk proving path)** |
+| Developer/Operator workflow | Mature but fragmented across stacks | Powerful but heavy zk operational surface | **One-command local deployment + E2E + Docker long-run workflow** |
+
+Helix is built for teams that want **Type 1 EVM-level compatibility**, **high throughput**, and **proof-system flexibility** without being locked into a single proving path.
