@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/helix-icon-v4-chip.svg" alt="Helix" width="140" />
+</p>
+
 # Helix
 
 Helix is an Ethereum-equivalent L2 rollup stack focused on **high throughput**, **modular architecture**, and **production-ready operations**.
